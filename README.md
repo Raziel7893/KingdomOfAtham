@@ -42,7 +42,7 @@ TBD
 
 ### Other notes
 - The Dedicated Server Software is really freshly released.
-* WGSM and this plugin is not taking liability if something happens to your server, the app is only for managing your server easily *
+- * WGSM and this plugin is not taking liability if something happens to your server, the app is only for managing your server easily *
 
 ### Support
 [WGSM](https://discord.com/channels/590590698907107340/645730252672335893)
