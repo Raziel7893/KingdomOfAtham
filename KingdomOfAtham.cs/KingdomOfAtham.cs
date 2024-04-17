@@ -42,7 +42,7 @@ namespace WindowsGSM.Plugins
         // - Game server default values
         public string Port = "7777"; // Default port
 
-        public string Additional = "?ServerPassword=?ServerAdminPassword=? -batchmode -nographics -log -nosteam"; // Additional server start parameter
+        public string Additional = " -batchmode -nographics -log -NOSTEAM"; // Additional server start parameter
 
         // TODO: Following options are not supported yet, as ther is no documentation of available options
         public string Maxplayers = "16"; // Default maxplayers        
@@ -69,7 +69,7 @@ namespace WindowsGSM.Plugins
             }
 
             StringBuilder sb = new StringBuilder();
-            sb.Append($"?SessionName={serverData.ServerName}?Port={serverData.ServerPort}?QueryPort={serverData.ServerQueryPort}?MaxPlayers={serverData.ServerMaxPlayer}");
+            sb.Append($"?SessionName={serverData.ServerName.Trim()}?Port={serverData.ServerPort}?QueryPort={serverData.ServerQueryPort}?MaxPlayers={serverData.ServerMaxPlayer}");
             
             if(serverData.ServerParam.StartsWith("-")) 
                 sb.Append($" {serverData.ServerParam}");
@@ -92,7 +92,7 @@ namespace WindowsGSM.Plugins
             };
 
             // Set up Redirect Input and Output to WindowsGSM Console if EmbedConsole is on
-            if (AllowsEmbedConsole)
+            if (_serverData.EmbedConsole)
             {
                 p.StartInfo.RedirectStandardInput = true;
                 p.StartInfo.RedirectStandardOutput = true;
@@ -106,7 +106,7 @@ namespace WindowsGSM.Plugins
             try
             {
                 p.Start();
-                if (AllowsEmbedConsole)
+                if (_serverData.EmbedConsole)
                 {
                     p.BeginOutputReadLine();
                     p.BeginErrorReadLine();
