@@ -24,7 +24,15 @@
 🖥️ https://steamdb.info/app/1736750/info/
 
 ### Port Forwarding
-TBD
+- Default Game Port: 7777 UDP
+  - can be changed via WGSM Edit Config Button. Needs Portforwarding and Firewall Exception(WindowsFirewall exception will be set by WindowsGSM)
+
+### Files To Backup
+- Save Gane (You could only save serverfiles/SMALLAND/Saved , but that includes many big logs)
+  - WindowsGSM/servers/%ID%/serverfiles/KoA/Saved/SaveGames
+  - WindowsGSM/servers/%ID%/serverfiles/KoA/Saved/Config/WindowsServer", backupName="Smalland/Smalland/Saved/Config/WindowsServer
+- WindowsGSM Config
+  - WindowsGSM/servers/%ID%/configs
 
 ### Available Params
 TBD
@@ -34,7 +42,7 @@ TBD
 
 ### Other notes
 - The Dedicated Server Software is really freshly released.
-* WGSM and this plugin is not taking liability if something happens to your server, the app is only for managing your server easily *
+- * WGSM and this plugin is not taking liability if something happens to your server, the app is only for managing your server easily *
 
 ### Support
 [WGSM](https://discord.com/channels/590590698907107340/645730252672335893)
