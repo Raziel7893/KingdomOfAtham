@@ -3,6 +3,11 @@
 
 ## PLEASE ⭐STAR⭐ THE REPO IF YOU LIKE IT! THANKS!
 
+### Prerequisits for the Server
+- to install prerequisits for the server:
+  - click Browse => Server files, go to _CommonRedist
+  - install everything in there even if you think you already have it.
+
 ### WindowsGSM Installation: 
 1. Download  WindowsGSM https://windowsgsm.com/ 
 2. Create a Folder at a Location you wan't all Server to be Installed and Run.
